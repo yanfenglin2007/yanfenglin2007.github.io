@@ -15,7 +15,7 @@
 
         body {
             font-family: "Georgia", serif;
-            background-color: #E8E8E8;
+            background-color: #DFDFDF;
             color: var(--ink);
             margin: 0;
             padding: 40px 20px;
@@ -26,78 +26,106 @@
             margin: 0 auto;
             background: var(--paper-ivory);
             display: grid;
-            grid-template-columns: 340px 1fr;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+            grid-template-columns: 320px 1fr;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+            border: 1px solid #D1D1D1;
         }
 
-        /* --- 左侧栏：现代复古红 --- */
+        /* --- 左侧栏 --- */
         .sidebar {
             background-color: var(--vintage-red);
             color: white;
-            padding: 50px 35px;
+            padding: 50px 30px;
             border-right: 4px solid var(--antique-gold);
         }
 
-        /* 修复后的头像样式：比例不再变形 */
         .sidebar img {
             width: 180px;
             height: 180px;
-            border-radius: 50%; /* 改为圆形，更有复古勋章感 */
-            object-fit: cover;   /* 关键：保持比例不被压扁 */
+            border-radius: 50%;
+            object-fit: cover; /* 保证头像不压扁 */
             object-position: center;
-            border: 4px solid var(--antique-gold);
-            outline: 2px solid white; /* 双层边框 */
+            border: 3px solid var(--antique-gold);
+            outline: 2px solid white;
             display: block;
             margin: 0 auto 30px auto;
-            background: white;
         }
 
-        .sidebar h1 { font-size: 2.2em; text-align: center; margin: 10px 0; }
-        .sidebar-subtitle { text-align: center; color: var(--antique-gold); font-style: italic; margin-bottom: 40px; }
+        .sidebar h1 { font-size: 2.2em; text-align: center; margin: 0; font-family: "Palatino", serif; }
+        .sidebar-subtitle { text-align: center; color: var(--antique-gold); font-style: italic; margin-bottom: 35px; }
+
+        .sidebar-section { margin-bottom: 30px; }
+        .sidebar-section h3 { 
+            font-size: 0.85em; 
+            text-transform: uppercase; 
+            letter-spacing: 2px;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            padding-bottom: 5px;
+            color: var(--antique-gold);
+        }
 
         .dune-quote {
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.3);
+            margin-top: 40px;
+            padding: 20px;
+            background: rgba(0,0,0,0.1);
             font-style: italic;
             font-size: 0.9em;
-            color: #DDD;
+            line-height: 1.5;
+            border-radius: 4px;
         }
 
-        /* --- 右侧内容区 --- */
-        .main-content { padding: 60px 70px; }
+        /* --- 右侧内容 --- */
+        .main-content { padding: 60px 65px; }
 
         h2 { 
             color: var(--scholarly-purple); 
             font-variant: small-caps;
-            border-bottom: 1px solid var(--antique-gold);
-            padding-bottom: 10px;
+            border-bottom: 2px solid var(--antique-gold);
+            display: inline-block;
+            padding-right: 30px;
             margin-bottom: 30px;
         }
 
-        .project-card {
+        .card {
             background: white;
             padding: 25px;
+            border: 1px solid #EEE;
             border-left: 6px solid var(--vintage-red);
-            border-top: 1px solid #EEE;
-            border-right: 1px solid #EEE;
-            border-bottom: 1px solid #EEE;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
+
+        /* 技能标签排版 */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .tech-item {
+            padding: 10px;
+            background: #F9F9F9;
+            border: 1px solid #EAEAEA;
+            font-size: 0.95em;
+        }
+
+        .tech-item b { color: var(--vintage-red); }
 
         /* 丘吉尔名言区 */
         .churchill-box {
-            margin-top: 60px;
-            padding: 30px;
+            margin-top: 50px;
+            padding: 35px;
             background: #F4F4F4;
-            border-left: 10px solid var(--antique-gold);
+            border-right: 8px solid var(--antique-gold);
             font-family: "Baskerville", serif;
+            text-align: center;
         }
 
-        .quote-text { font-style: italic; font-size: 1.3em; display: block; margin-bottom: 10px; }
-        .quote-cite { font-weight: bold; color: var(--vintage-red); text-transform: uppercase; }
+        .quote-text { font-style: italic; font-size: 1.3em; color: #333; display: block; margin-bottom: 10px; }
+        .quote-cite { font-weight: bold; color: var(--vintage-red); text-transform: uppercase; letter-spacing: 1px; }
 
-        .footer-note { text-align: center; margin-top: 50px; font-size: 0.8em; color: #777; }
+        @media (max-width: 900px) {
+            .container { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
@@ -106,36 +134,66 @@
     <aside class="sidebar">
         <img src="profile.jpg" alt="Yanfeng Lin">
         <h1>Yanfeng Lin</h1>
-        <p class="sidebar-subtitle">Undergraduate Student, UM</p>
+        <p class="sidebar-subtitle">Undergraduate Scholar, UM</p>
 
-        <div style="font-size: 0.9em; line-height: 1.8;">
-            <p><b>Affiliation:</b><br>Department of Civil Engineering</p>
-            <p><b>Focus:</b><br>Smart Energy & IoT</p>
+        <div class="sidebar-section">
+            <h3>Affiliation</h3>
+            <p style="font-size: 0.95em;">Dept. of Civil Engineering<br>University of Macau</p>
+        </div>
+
+        <div class="sidebar-section">
+            <h3>Languages</h3>
+            <p style="font-size: 0.95em; line-height: 1.6;">
+                • Mandarin (Native)<br>
+                • English (IELTS Prep)<br>
+                • Cantonese (Receptive)
+            </p>
         </div>
 
         <div class="dune-quote">
             "I must not fear. Fear is the mind-killer... Where the fear has gone there will be nothing. Only I will remain."
-            <p style="text-align: right; color: var(--antique-gold);">— Frank Herbert</p>
+            <p style="text-align: right; color: var(--antique-gold); margin-top: 10px;">— Frank Herbert, Dune</p>
         </div>
     </aside>
 
     <main class="main-content">
         <section>
-            <h2>Research & Projects</h2>
-            <div class="project-card">
-                <span style="background: var(--scholarly-purple); color: white; padding: 2px 8px; font-size: 0.8em;">Lead Presenter</span>
-                <h4 style="margin-top: 15px;">A Plug-and-Play Smart Terminal for Demand Response</h4>
-                <p>Represented the <b>University of Macau</b> in the International Undergraduate Project Competition (North Zone II) 2025 as the <b>Lead Presenter</b>.</p>
-                <p style="font-size: 0.9em;">Research conducted with the <b>Smart Energy Group</b> at SKL-IOTSC.</p>
+            <h2>Research & Engineering</h2>
+            <div class="card">
+                <span style="background: var(--scholarly-purple); color: white; padding: 2px 10px; font-size: 0.8em; font-weight: bold;">LEAD PRESENTER</span>
+                <h4 style="margin: 15px 0 10px 0; font-size: 1.4em;">Plug-and-Play Smart Terminal for Demand Response</h4>
+                <p style="font-size: 1.05em;">Represented the <b>University of Macau</b> in the International Undergraduate Project Competition (North Zone II) 2025. Supervised by Prof. Hongxun HUI at <b>SKL-IOTSC</b>.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Technical Compendium</h2>
+            <div class="card" style="border-left-color: var(--antique-gold);">
+                <div class="tech-grid">
+                    <div class="tech-item"><b>Programming:</b> Python (CS61A Framework)</div>
+                    <div class="tech-item"><b>Hardware:</b> Arduino, IoT, ESP8266</div>
+                    <div class="tech-item"><b>Design:</b> AutoCAD, Structural Analysis</div>
+                    <div class="tech-item"><b>Methodology:</b> Hardware-in-the-loop</div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Academic Coursework</h2>
+            <div class="card" style="border-left-color: var(--scholarly-purple);">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 1.05em;">
+                    <div>• <b>ECEN1008:</b> Physics I</div>
+                    <div>• <b>GEST1004:</b> Quantitative Reasoning</div>
+                    <div>• <b>CIVL1000:</b> Computer Science</div>
+                    <div>• <b>Engineering Design</b></div>
+                </div>
             </div>
         </section>
 
         <section>
             <h2>Professional Memberships</h2>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 0.95em;">
-                <div>• IEEE PES Student Member</div>
-                <div>• IET Student Network Member</div>
-                <div>• ASCE ISG UMCEE Member</div>
+            <div style="font-size: 1.05em; margin-bottom: 40px; color: #555;">
+                • IEEE PES Student Member | • IET Student Network | • ASCE ISG UMCEE
             </div>
         </section>
 
@@ -144,7 +202,7 @@
             <span class="quote-cite">— Winston S. Churchill</span>
         </div>
 
-        <div class="footer-note">
+        <div style="text-align: center; margin-top: 40px; font-style: italic; color: #888;">
             "Truth is truth to the end of reckoning." — Shakespeare
         </div>
     </main>
