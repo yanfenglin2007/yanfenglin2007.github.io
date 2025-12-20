@@ -5,23 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yanfeng Lin - Personal Profile</title>
     <style>
-        /* 现代保守主义色调：深灰、暗红、奶油白 */
         :root {
-            --conservative-dark: #2C3E50; /* 深石板蓝灰 */
-            --oxblood-red: #800000;      /* 保守主义标志红 */
-            --antique-gold: #B8860B;     /* 暗金 */
-            --text-main: #333333;
+            --conservative-dark: #2C3E50; 
+            --oxblood-red: #800000;      
+            --antique-gold: #B8860B;     
             --bg-paper: #FDFDFD;
-            --section-bg: #F8F9FA;
         }
 
         body {
-            font-family: "Georgia", "Times New Roman", serif;
-            background-color: #ECECEC;
-            color: var(--text-main);
-            line-height: 1.7;
-            margin: 0;
-            padding: 0;
+            font-family: "Georgia", serif;
+            background-color: #E5E5E5;
+            margin: 0; padding: 0;
         }
 
         .container {
@@ -29,250 +23,113 @@
             margin: 60px auto;
             background: var(--bg-paper);
             padding: 50px 60px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border-top: 8px solid var(--oxblood-red); /* 顶部保守主义红条 */
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            border-top: 10px solid var(--oxblood-red);
         }
 
-        /* 头部排版 */
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
+        header { text-align: center; margin-bottom: 40px; }
 
-        /* 头像：确保比例正常 */
         .profile-img {
-            width: 150px;
-            height: 150px;
+            width: 160px;
+            height: 160px;
             border-radius: 50%;
-            object-fit: cover; /* 关键：防止压扁 */
+            object-fit: cover; /* 保证比例不缩放压扁 */
             border: 3px solid var(--oxblood-red);
-            padding: 3px;
-            background: white;
+            padding: 4px;
+            background-color: #EEE;
             margin-bottom: 20px;
         }
 
-        h1 {
-            color: var(--conservative-dark);
-            margin: 10px 0;
-            font-size: 2.6em;
-            letter-spacing: 1px;
-        }
+        h1 { color: var(--conservative-dark); font-size: 2.8em; margin: 10px 0; }
+        .subtitle { font-size: 1.2em; color: #666; font-style: italic; }
+        .university { font-weight: bold; color: var(--oxblood-red); font-size: 1.15em; }
 
-        .subtitle {
-            font-size: 1.1em;
-            color: #666;
-            font-style: italic;
-        }
-
-        .university {
-            font-weight: bold;
-            color: var(--oxblood-red);
-            font-size: 1.1em;
-            margin-top: 5px;
-        }
-
-        /* 标签 */
-        .tag-container {
-            margin-top: 20px;
-        }
-        .tag {
-            display: inline-block;
-            border: 1px solid var(--conservative-dark);
-            color: var(--conservative-dark);
-            padding: 4px 12px;
-            font-size: 0.85em;
-            margin: 0 5px;
-            font-family: Arial, sans-serif;
-            text-transform: uppercase;
-        }
-
-        /* 章节样式 */
-        section {
-            margin-bottom: 45px;
-        }
-
-        h2 {
-            font-family: "Palatino", serif;
-            color: var(--conservative-dark);
-            border-bottom: 1px solid #DDD;
-            padding-bottom: 10px;
-            margin-bottom: 25px;
-            font-variant: small-caps;
-            letter-spacing: 1px;
-        }
-
-        /* 列表与卡片 */
-        .content-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .item-box {
-            background: var(--section-bg);
-            margin-bottom: 15px;
-            padding: 20px;
-            border-left: 4px solid var(--conservative-dark);
-            transition: all 0.3s ease;
-        }
-
-        .item-box:hover {
-            border-left-color: var(--oxblood-red);
-            background: #FFF;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-        }
-
-        .role-title {
-            font-weight: bold;
-            font-size: 1.15em;
-            display: block;
-            color: var(--conservative-dark);
-        }
-
-        .org-name {
-            color: var(--oxblood-red);
-            font-size: 0.95em;
-            font-weight: bold;
-        }
-
-        /* 左右分布的课程与技能 */
-        .grid-info {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        /* 名言样式 */
         .quote-aside {
-            border-top: 1px double #CCC;
-            border-bottom: 1px double #CCC;
-            padding: 25px 0;
-            margin: 40px 0;
+            border-top: 1px solid #EEE;
+            border-bottom: 1px solid #EEE;
+            padding: 25px;
+            margin: 30px 0;
             text-align: center;
             font-style: italic;
-            color: #555;
         }
 
         .quote-author {
-            display: block;
-            margin-top: 10px;
-            font-weight: bold;
-            color: var(--oxblood-red);
-            font-style: normal;
-            font-size: 0.9em;
-            text-transform: uppercase;
+            display: block; margin-top: 10px; font-weight: bold; 
+            color: var(--oxblood-red); text-transform: uppercase; font-size: 0.8em;
         }
 
-        footer {
-            text-align: center;
-            font-size: 0.85em;
-            color: #999;
-            margin-top: 60px;
-            padding-top: 20px;
-            border-top: 1px solid #EEE;
+        section { margin-bottom: 40px; }
+        h2 { border-bottom: 2px solid var(--antique-gold); display: inline-block; padding-right: 40px; font-variant: small-caps; }
+
+        .item-box {
+            background: #F8F9FA;
+            padding: 20px;
+            border-left: 5px solid var(--conservative-dark);
+            margin-bottom: 15px;
         }
 
-        a { color: var(--oxblood-red); text-decoration: none; }
-        a:hover { text-decoration: underline; }
+        .grid-info { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 
-        @media (max-width: 600px) {
-            .container { margin: 10px; padding: 25px; }
-            .grid-info { grid-template-columns: 1fr; }
-        }
+        footer { text-align: center; font-size: 0.9em; color: #888; border-top: 1px solid #EEE; padding: 20px; }
     </style>
 </head>
 <body>
-
     <div class="container">
         <header>
-            < img src="profile.jpg" alt="Yanfeng Lin" class="profile-img">
+            < img src="profile.jpg" 
+                 alt="Yanfeng Lin" 
+                 class="profile-img" 
+                 onerror="this.src='https://ui-avatars.com/api/?name=Yanfeng+Lin&background=2C3E50&color=fff&size=160'">
             <h1>Yanfeng Lin</h1>
             <div class="subtitle">Undergraduate Student, Class of 2029</div>
-            <div class="university">Department of Civil Engineering</div>
             <div class="university">University of Macau</div>
-            
-            <div class="tag-container">
-                <span class="tag">Civil Engineering</span>
-                <span class="tag">Smart Energy</span>
-                <span class="tag">IoT Development</span>
-            </div>
         </header>
 
         <div class="quote-aside">
-            "I must not fear. Fear is the mind-killer... Where the fear has gone there will be nothing. Only I will remain."
+            "I must not fear. Fear is the mind-killer..."
             <span class="quote-author">— Frank Herbert, Dune</span>
         </div>
 
         <section>
-            <h2>Research & Project</h2>
+            <h2>Research & Engineering</h2>
             <div class="item-box">
-                <span style="font-size: 0.8em; color: var(--oxblood-red); font-weight: bold;">LEAD PRESENTER</span>
-                <span class="role-title">A Plug-and-Play Smart Terminal for Demand Response</span>
-                <span class="org-name">SKL-IOTSC | Smart Energy Group</span>
-                <p style="font-size: 0.95em; margin-top: 10px;">
-                    Represented the <b>University of Macau</b> in the North Zone II Undergraduate Project Competition 2025. 
-                    Supervised by <b>Prof. Hongxun HUI</b>. Focus on power system demand response and hardware-in-the-loop technologies.
-                </p >
+                <strong style="color:var(--oxblood-red)">LEAD PRESENTER</strong><br>
+                <strong>Smart Terminal for Demand Response</strong><br>
+                Represented <b>University of Macau</b> at International Competition 2025. 
+                Conducted at <b>SKL-IOTSC</b>.
             </div>
         </section>
 
         <section>
-            <h2>Technical & Languages</h2>
+            <h2>Technical Compendium</h2>
             <div class="grid-info">
                 <div class="item-box">
-                    <span class="role-title">Programming & Tools</span>
-                    <ul style="padding-left: 18px; font-size: 0.95em; margin-top: 10px;">
+                    <strong>Programming & IoT</strong>
+                    <ul style="font-size: 0.9em; margin-top: 10px;">
                         <li>Python (CS61A Framework)</li>
                         <li>Arduino & ESP8266 IoT</li>
-                        <li>AutoCAD & Structural Design</li>
+                        <li>AutoCAD & Design</li>
                     </ul>
                 </div>
                 <div class="item-box">
-                    <span class="role-title">Languages</span>
-                    <ul style="padding-left: 18px; font-size: 0.95em; margin-top: 10px;">
+                    <strong>Languages</strong>
+                    <ul style="font-size: 0.9em; margin-top: 10px;">
                         <li>Mandarin (Native)</li>
-                        <li>English (IELTS Preparation)</li>
+                        <li>English (IELTS Prep)</li>
                         <li>Cantonese (Receptive)</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <section>
-            <h2>Academic Coursework</h2>
-            <div class="item-box" style="border-left-color: var(--antique-gold);">
-                <div class="grid-info" style="font-size: 0.95em;">
-                    <div>• ECEN1008: Physics I</div>
-                    <div>• GEST1004: Quantitative Reasoning</div>
-                    <div>• CIVL1000: Computer Science</div>
-                    <div>• Engineering Design Foundation</div>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2>Memberships</h2>
-            <div class="grid-info">
-                <div style="font-size: 0.9em; line-height: 2;">
-                    • IEEE Power & Energy Society (PES)<br>
-                    • IET University of Macau Student Network
-                </div>
-                <div style="font-size: 0.9em; line-height: 2;">
-                    • ASCE ISG UMCEE Member<br>
-                    • Faculty of Science and Technology (FST)
-                </div>
-            </div>
-        </section>
-
-        <div class="quote-aside" style="background: #F4F4F4; border: none;">
+        <div class="quote-aside" style="background:#F4F4F4; border:none;">
             "The farther back you can look, the farther forward you are likely to see."
             <span class="quote-author">— Winston S. Churchill</span>
         </div>
 
         <footer>
-            <p>"Truth is truth to the end of reckoning." — Shakespeare</p >
             &copy; 2025 Yanfeng Lin. University of Macau.
         </footer>
     </div>
-
 </body>
 </html>
