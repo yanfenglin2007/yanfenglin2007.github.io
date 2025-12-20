@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yanfeng Lin | University of Macau</title>
+    <style>
+        :root {
+            --um-blue: #002e63;
+            --accent-gold: #cba052;
+            --light-gray: #f8f9fa;
+            --dark-bg: #121212;
+        }
+
+        body {
+            font-family: 'Optima', 'Palatino', 'serif';
+            background-color: #f0f2f5;
+            color: #333;
+            line-height: 1.7;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1050px;
+            margin: 0 auto;
+            background: white;
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        /* LEFT COLUMN */
+        .sidebar {
+            background-color: var(--um-blue);
+            color: white;
+            padding: 50px 35px;
+        }
+
+        .profile-header h1 { margin: 0; font-size: 2.2em; letter-spacing: 1px; }
+        .profile-header p { color: #bdc3c7; margin-top: 8px; font-style: italic; font-size: 1.1em; }
+
+        .sidebar-section { margin-top: 45px; }
+        .sidebar-section h3 { 
+            border-bottom: 1px solid rgba(255,255,255,0.2); 
+            padding-bottom: 10px; 
+            font-size: 1em; 
+            text-transform: uppercase; 
+            letter-spacing: 2px;
+            color: var(--accent-gold);
+        }
+
+        .info-text { font-size: 0.95em; color: #ecf0f1; margin-bottom: 15px; }
+
+        .skill-tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.08);
+            padding: 5px 12px;
+            border-radius: 4px;
+            margin: 4px;
+            font-size: 0.85em;
+            border: 1px solid rgba(255,255,255,0.15);
+        }
+
+        /* RIGHT COLUMN */
+        .main-content { padding: 50px 60px; }
+        
+        section { margin-bottom: 45px; }
+        h2 { 
+            color: var(--um-blue); 
+            border-left: 4px solid var(--accent-gold); 
+            padding-left: 20px; 
+            font-weight: 500;
+            font-size: 1.6em;
+            margin-bottom: 25px;
+        }
+
+        .card {
+            background: var(--light-gray);
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #e1e4e8;
+            transition: transform 0.2s;
+        }
+        
+        .card:hover { transform: translateY(-3px); }
+
+        .card h4 { margin: 0 0 12px 0; color: var(--um-blue); font-size: 1.2em; }
+        
+        .course-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            font-size: 0.95em;
+        }
+
+        /* QUOTES DESIGN */
+        .quote-block {
+            background: var(--dark-bg);
+            color: #f1f1f1;
+            padding: 40px;
+            border-radius: 12px;
+            margin-top: 30px;
+            position: relative;
+            border-bottom: 5px solid var(--accent-gold);
+        }
+        .quote-text { font-style: italic; font-size: 1.1em; line-height: 1.8; display: block; }
+        .quote-cite { display: block; text-align: right; margin-top: 15px; color: var(--accent-gold); font-size: 0.9em; }
+
+        .footer-note {
+            text-align: center;
+            font-size: 0.85em;
+            color: #95a5a6;
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+        @media (max-width: 900px) {
+            .container { grid-template-columns: 1fr; }
+            .sidebar { text-align: center; }
+            .course-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <aside class="sidebar">
+        <div style="text-align: center; margin-bottom: 20px;">
+    <img src="profile.jpg" alt="Yanfeng Lin" 
+         style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; 
+                border: 3px solid var(--accent-gold);">
+</div>
+            <h1>Yanfeng Lin</h1>
+            <p>Undergraduate Student</p>
+            <p>Class of 2029</p>
+        </div>
+
+        <div class="sidebar-section">
+            <h3>Education Info</h3>
+            <p class="info-text">
+                Department of Civil Engineering<br>
+                University of Macau
+            </p>
+        </div>
+
+        <div class="sidebar-section">
+            <h3>Technical Skills</h3>
+            <div class="skill-tag">Python (CIVL1000)</div>
+            <div class="skill-tag">Arduino/ESP8266</div>
+            <div class="skill-tag">CS61A Foundation</div>
+            <div class="skill-tag">AutoCAD (Learning)</div>
+            <div class="skill-tag">C++ Essentials</div>
+        </div>
+
+        <div class="sidebar-section">
+            <h3>Languages</h3>
+            <p class="info-text">
+                • Mandarin (Native)<br>
+                • English (IELTS Prep 2026)<br>
+                • Cantonese (Receptive)
+            </p>
+        </div>
+
+        <div class="sidebar-section" style="opacity: 0.7; font-size: 0.9em; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
+            <p>"The farther back you can look, the farther forward you are likely to see."</p>
+            <p style="text-align: right;">— W. Churchill</p>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <section>
+            <h2>Research Interests</h2>
+            <p>
+                My passion lies at the intersection of <strong>Architectural Design</strong> and <strong>Intelligent Robotics</strong>. 
+                I am currently exploring how cross-disciplinary technologies can optimize structural efficiency and building automation. 
+                I believe in staying humble while relentlessly pursuing new frontiers in engineering.
+            </p>
+        </section>
+
+        <section>
+            <h2>Academic Coursework</h2>
+            <div class="card">
+                <h4>University of Macau | Year 1</h4>
+                <div class="course-grid">
+                    <div>• <b>ECEN1008:</b> Physics I</div>
+                    <div>• <b>GEST1004:</b> Quantitative Reasoning</div>
+                    <div>• <b>CIVL1000:</b> Computer Science</div>
+                    <div>• <b>Design:</b> Structural Interests</div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Exposure & Experience</h2>
+            <div class="card">
+                <h4>AIE - Global Intelligent Machinery Expo</h4>
+                <p style="font-size: 0.95em;">Field study at the Zhuhai-Macau Expo, focusing on the latest applications of intelligent machinery and electronic products in modern industry.</p>
+            </div>
+            
+            <div class="card">
+                <h4>Technical Practice</h4>
+                <ul style="padding-left: 20px; font-size: 0.95em;">
+                    <li><b>IoT Development:</b> Gained exposure to ESP8266 hardware development and Arduino IDE programming.</li>
+                    <li><b>Computing Foundation:</b> Completed introductory coursework based on UC Berkeley's CS61A (Structure and Interpretation of Computer Programs).</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Professional Memberships</h2>
+            <div class="card" style="background: white; border-left: 4px solid var(--um-blue);">
+                <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.95em;">
+                    <li style="margin-bottom: 8px;">• IEEE Power & Energy Society (PES) Student Member</li>
+                    <li style="margin-bottom: 8px;">• IET University of Macau Student Network Member</li>
+                    <li>• ASCE ISG UMCEE Member</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <div class="quote-block">
+                <span class="quote-text">
+                    "I must not fear. Fear is the mind-killer... Where the fear has gone there will be nothing. Only I will remain."
+                </span>
+                <span class="quote-cite">— Frank Herbert, <i>Dune</i></span>
+            </div>
+            <div class="footer-note">
+                "Truth is truth to the end of reckoning." — Shakespeare
+            </div>
+        </section>
+    </main>
+</div>
+
+</body>
+
+</html>
+
+
+
+
