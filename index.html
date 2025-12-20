@@ -6,157 +6,152 @@
     <title>Yanfeng Lin | University of Macau</title>
     <style>
         :root {
-            --victorian-red: #700101;    /* 维多利亚暗红 */
-            --royal-purple: #4B0082;     /* 皇家紫 */
-            --antique-gold: #C5A059;     /* 古董金 */
-            --ivory: #FDFCF0;            /* 象牙白背景 */
-            --ink-black: #1A1A1A;        /* 墨黑文字 */
+            --vintage-red: #800000;      /* 现代复古红 */
+            --scholarly-purple: #483D8B;  /* 暗紫色，更稳重 */
+            --antique-gold: #D4AF37;     /* 亮金点缀 */
+            --paper-ivory: #FCFAFA;      /* 现代纸张白 */
+            --ink: #2C3E50;
         }
 
         body {
-            font-family: "Georgia", "Baskerville", "Times New Roman", serif;
-            background-color: #2D2D2D; /* 外部暗色底，衬托中间的“纸张” */
-            color: var(--ink-black);
-            line-height: 1.8;
+            font-family: "Georgia", "Times New Roman", serif;
+            background-color: #F0F0F2;
+            color: var(--ink);
+            line-height: 1.7;
             margin: 0;
-            padding: 50px 20px;
+            padding: 40px 20px;
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
-            background: var(--ivory);
+            background: var(--paper-ivory);
             display: grid;
-            grid-template-columns: 320px 1fr;
-            box-shadow: 0 0 50px rgba(0,0,0,0.5);
-            border: 2px solid var(--antique-gold);
-            position: relative;
+            grid-template-columns: 340px 1fr;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            border: 1px solid #E0E0E0;
+            border-radius: 2px;
         }
 
-        /* 侧边栏：深红木质感 */
+        /* --- 左侧栏：现代复古红 --- */
         .sidebar {
-            background-color: var(--victorian-red);
-            color: var(--ivory);
-            padding: 60px 35px;
-            border-right: 3px double var(--antique-gold);
+            background-color: var(--vintage-red);
+            color: white;
+            padding: 50px 35px;
+            display: flex;
+            flex-direction: column;
+            border-right: 4px solid var(--antique-gold);
         }
 
         .sidebar img {
-            width: 170px;
-            height: 170px;
-            border-radius: 0; /* 维多利亚风格多用直角 */
-            object-fit: cover;
+            width: 180px;
+            height: 180px;
             border: 3px solid var(--antique-gold);
             padding: 5px;
             background: white;
-            margin-bottom: 30px;
+            margin: 0 auto 30px auto;
         }
 
-        .profile-header h1 { 
+        .sidebar h1 { 
             font-size: 2.2em; 
-            margin: 10px 0; 
-            font-family: "Playfair Display", serif;
+            margin: 0; 
+            font-family: "Palatino", serif;
             letter-spacing: 1px;
-            border-bottom: 1px solid var(--antique-gold);
-            padding-bottom: 10px;
+            text-align: center;
         }
 
-        .sidebar-section { margin-top: 40px; }
+        .sidebar-subtitle {
+            text-align: center;
+            color: var(--antique-gold);
+            font-style: italic;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+        }
+
+        .sidebar-section { margin-bottom: 35px; }
         .sidebar-section h3 { 
-            font-size: 0.9em; 
+            font-size: 0.85em; 
             text-transform: uppercase; 
             letter-spacing: 2px;
-            color: var(--antique-gold);
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            padding-bottom: 5px;
             margin-bottom: 15px;
         }
 
-        .sidebar-text { font-size: 0.95em; opacity: 0.9; }
-
-        /* 主内容区 */
-        .main-content { padding: 60px 70px; position: relative; }
-        
-        /* 装饰角标 */
-        .main-content::before {
-            content: "❧";
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 2em;
-            color: var(--antique-gold);
-        }
-
-        h2 { 
-            color: var(--royal-purple); 
-            font-family: "Georgia", serif;
-            border-bottom: 1px solid var(--antique-gold);
-            display: block;
-            font-size: 1.7em;
-            margin-bottom: 30px;
-            font-variant: small-caps;
-        }
-
-        .card {
-            background: rgba(197, 160, 89, 0.05); /* 极浅的金底 */
-            padding: 30px;
-            margin-bottom: 30px;
-            border: 1px solid rgba(197, 160, 89, 0.3);
-            position: relative;
-        }
-
-        .card::after {
-            content: "";
-            position: absolute;
-            left: 0; top: 0; bottom: 0;
-            width: 5px;
-            background: var(--royal-purple);
-        }
-
-        .card h4 { margin: 0 0 10px 0; font-size: 1.4em; color: var(--victorian-red); }
-
-        /* 丘吉尔名言版块：核心装饰 */
-        .churchill-box {
-            margin: 50px 0;
-            padding: 40px;
-            border: 2px solid var(--antique-gold);
-            background: #fff;
-            text-align: center;
-            position: relative;
-        }
-
-        .churchill-box::before {
-            content: "“";
-            font-size: 5em;
-            family: "Georgia";
-            position: absolute;
-            top: -20px;
-            left: 20px;
-            color: var(--antique-gold);
-            opacity: 0.3;
-        }
-
-        .quote-text {
+        /* 左栏名言：沙丘 (Dune) */
+        .dune-quote {
+            margin-top: auto;
+            padding-top: 30px;
+            border-top: 1px double rgba(255,255,255,0.5);
             font-family: "Georgia", serif;
             font-style: italic;
-            font-size: 1.4em;
-            color: var(--ink-black);
-            display: block;
+            font-size: 0.95em;
+            line-height: 1.5;
+            color: #DDD;
+        }
+
+        /* --- 右侧内容区 --- */
+        .main-content { padding: 60px 70px; }
+
+        h2 { 
+            color: var(--scholarly-purple); 
+            font-variant: small-caps;
+            font-size: 1.8em;
+            border-bottom: 1px solid #EEE;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        .project-card {
+            background: white;
+            padding: 30px;
+            border: 1px solid #EAEAEA;
+            border-left: 6px solid var(--vintage-red);
+            margin-bottom: 30px;
+        }
+
+        .project-card h4 { margin: 0 0 10px 0; font-size: 1.4em; color: var(--ink); }
+
+        .tag {
+            background: var(--scholarly-purple);
+            color: white;
+            padding: 3px 12px;
+            font-size: 0.8em;
+            font-weight: bold;
+            display: inline-block;
             margin-bottom: 15px;
         }
 
-        .quote-cite {
+        /* 右栏底部名言：丘吉尔 (Churchill) */
+        .churchill-box {
+            margin-top: 60px;
+            padding: 40px;
+            background: #F9F9F9;
+            border-right: 8px solid var(--antique-gold);
+            text-align: center;
+        }
+
+        .churchill-text {
+            font-family: "Baskerville", "Georgia", serif;
+            font-size: 1.3em;
+            font-style: italic;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .churchill-cite {
             font-weight: bold;
-            color: var(--victorian-red);
-            letter-spacing: 2px;
+            color: var(--vintage-red);
             text-transform: uppercase;
             font-size: 0.9em;
+            letter-spacing: 2px;
         }
 
         .footer-note {
             text-align: center;
             font-size: 0.85em;
-            color: #777;
-            margin-top: 50px;
-            font-style: italic;
+            color: #999;
+            margin-top: 40px;
         }
 
         @media (max-width: 900px) {
@@ -169,76 +164,81 @@
 
 <div class="container">
     <aside class="sidebar">
-        <div style="text-align: center;">
-            <img src="profile.jpg" alt="Yanfeng Lin">
-        </div>
-        <div class="profile-header">
-            <h1>Yanfeng Lin</h1>
-            <p>Undergraduate Scholar</p>
-            <p>University of Macau</p>
-        </div>
+        <img src="profile.jpg" alt="Yanfeng Lin">
+        <h1>Yanfeng Lin</h1>
+        <p class="sidebar-subtitle">Undergraduate Student, UM</p>
 
         <div class="sidebar-section">
-            <h3>Department</h3>
-            <p class="sidebar-text">Civil Engineering</p>
-        </div>
-
-        <div class="sidebar-section">
-            <h3>Scholarly Interests</h3>
-            <p class="sidebar-text">
-                Power Systems & Demand Response<br>
-                Internet of Things (IoT)<br>
-                Structural Design
+            <h3>Affiliation</h3>
+            <p style="font-size: 0.95em;">
+                Department of Civil Engineering<br>
+                University of Macau
             </p>
         </div>
 
         <div class="sidebar-section">
-            <h3>Technical Skills</h3>
-            <p class="sidebar-text">Python, Arduino, AutoCAD</p>
+            <h3>Technical</h3>
+            <p style="font-size: 0.9em; color: #EEE;">
+                Python, Arduino, IoT,<br>
+                AutoCAD, CS61A Framework
+            </p>
+        </div>
+
+        <div class="sidebar-section">
+            <h3>Memberships</h3>
+            <p style="font-size: 0.9em; color: #EEE; line-height: 1.6;">
+                • IEEE PES Member<br>
+                • IET Student Network<br>
+                • ASCE ISG UMCEE
+            </p>
+        </div>
+
+        <div class="dune-quote">
+            "I must not fear. Fear is the mind-killer... Where the fear has gone there will be nothing. Only I will remain."
+            <p style="text-align: right; color: var(--antique-gold); font-size: 0.85em; margin-top: 10px;">— Frank Herbert, Dune</p>
         </div>
     </aside>
 
     <main class="main-content">
         <section>
-            <h2>Academic Research & Projects</h2>
-            <div class="card">
-                <span style="color: var(--antique-gold); font-weight: bold; font-size: 0.8em; text-transform: uppercase;">Selected Project</span>
-                <h4>A Plug-and-Play Smart Terminal for Demand Response</h4>
-                <p style="font-style: italic; margin-bottom: 15px;">Supervised by Prof. Hongxun HUI</p>
-                <ul style="padding-left: 20px;">
-                    <li><b>Lead Presenter</b> representing the <b>University of Macau</b> in the International Undergraduate Project Competition (North Zone II) 2025.</li>
-                    <li>Developed hardware prototypes for smart terminals within the <b>Smart Energy Group</b>.</li>
-                    <li>Conducted at the <b>State Key Laboratory of Internet of Things for Smart City (SKL-IOTSC)</b>.</li>
+            <h2>Research & Engineering</h2>
+            <div class="project-card">
+                <div class="tag">Lead Presenter</div>
+                <h4>A Plug-and-Play Smart Terminal for Demand Response in Power Systems</h4>
+                <p style="font-style: italic; color: #666; font-size: 0.95em;">Under the supervision of Prof. Hongxun HUI</p>
+                <ul style="padding-left: 20px; font-size: 1.05em;">
+                    <li>Represented the <b>University of Macau</b> in the International Undergraduate Project Competition (North Zone II) 2025.</li>
+                    <li>Acted as the <b>Lead Presenter</b>, articulating the design and implementation of a smart terminal prototype.</li>
+                    <li>Conducted research with the <b>Smart Energy Group</b> at the <b>State Key Laboratory of Internet of Things for Smart City (SKL-IOTSC)</b>.</li>
                 </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Academic Coursework</h2>
+            <div class="project-card" style="border-left-color: var(--scholarly-purple);">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; font-size: 1.05em;">
+                    <div>• <b>ECEN1008:</b> Physics I</div>
+                    <div>• <b>GEST1004:</b> Quantitative Reasoning</div>
+                    <div>• <b>CIVL1000:</b> Computer Science</div>
+                    <div>• <b>Design:</b> Structural Interests</div>
+                </div>
             </div>
         </section>
 
         <div class="churchill-box">
-            <span class="quote-text">
+            <span class="churchill-text">
                 "The farther back you can look, the farther forward you are likely to see."
             </span>
-            <span class="quote-cite">— Winston S. Churchill</span>
+            <span class="churchill-cite">— Winston S. Churchill</span>
         </div>
 
-        <section>
-            <h2>Professional Affiliations</h2>
-            <div class="card" style="border-left-color: var(--antique-gold);">
-                <ul style="list-style: none; padding: 0; margin: 0;">
-                    <li style="margin-bottom: 10px;">• IEEE Power & Energy Society (PES) Student Member</li>
-                    <li style="margin-bottom: 10px;">• IET University of Macau Student Network Member</li>
-                    <li>• ASCE ISG UMCEE Member</li>
-                </ul>
-            </div>
-        </section>
-
-        <section>
-            <div style="font-style: italic; text-align: center; color: #555; margin-top: 30px;">
-                "Truth is truth to the end of reckoning." — Shakespeare
-            </div>
+        <section style="margin-top: 40px; text-align: center; border-top: 1px solid #EEE; padding-top: 20px;">
+            <p style="font-style: italic; color: #555;">"Truth is truth to the end of reckoning." — Shakespeare</p>
         </section>
 
         <div class="footer-note">
-            Anno Domini 2025 • Yanfeng Lin
+            © 2025 Yanfeng Lin • University of Macau
         </div>
     </main>
 </div>
