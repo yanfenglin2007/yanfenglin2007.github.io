@@ -6,16 +6,18 @@
     <title>Yanfeng Lin | University of Macau</title>
     <style>
         :root {
-            --um-blue: #002e63;
-            --accent-gold: #cba052;
-            --light-gray: #f8f9fa;
-            --dark-bg: #121212;
+            /* 调色板：英国红、海军蓝、清华紫 */
+            --british-red: #B22222;    /* British Red / Firebrick */
+            --oxford-blue: #002147;     /* Oxford Blue / Navy */
+            --tsinghua-purple: #660874; /* Tsinghua Purple */
+            --light-cream: #FDFDF9;    /* 象牙白复古背景 */
+            --text-dark: #2D2D2D;
         }
 
         body {
-            font-family: 'Optima', 'Palatino', 'serif';
-            background-color: #f0f2f5;
-            color: #333;
+            font-family: 'Garamond', 'Hoefler Text', 'Palatino', serif;
+            background-color: #F0F0F0;
+            color: var(--text-dark);
             line-height: 1.7;
             margin: 0;
             padding: 40px 20px;
@@ -24,71 +26,81 @@
         .container {
             max-width: 1050px;
             margin: 0 auto;
-            background: white;
+            background: var(--light-cream);
             display: grid;
             grid-template-columns: 320px 1fr;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
-            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+            border-radius: 8px; /* 更方正的经典造型 */
             overflow: hidden;
+            border: 1px solid #D1D1D1;
         }
 
-        /* LEFT COLUMN */
+        /* 左侧边栏：采用海军蓝 */
         .sidebar {
-            background-color: var(--um-blue);
+            background-color: var(--oxford-blue);
             color: white;
             padding: 50px 35px;
+            border-right: 4px solid var(--british-red); /* 英国红装饰条 */
         }
 
-        .profile-header h1 { margin: 0; font-size: 2.2em; letter-spacing: 1px; }
-        .profile-header p { color: #bdc3c7; margin-top: 8px; font-style: italic; font-size: 1.1em; }
+        .profile-header h1 { margin: 15px 0 5px 0; font-size: 2.2em; letter-spacing: 1px; font-weight: bold; }
+        .profile-header p { color: #D1D1D1; margin-top: 5px; font-style: italic; font-size: 1.1em; }
 
         .sidebar-section { margin-top: 45px; }
         .sidebar-section h3 { 
-            border-bottom: 1px solid rgba(255,255,255,0.2); 
-            padding-bottom: 10px; 
+            border-bottom: 2px solid var(--british-red); 
+            padding-bottom: 8px; 
             font-size: 1em; 
             text-transform: uppercase; 
             letter-spacing: 2px;
-            color: var(--accent-gold);
+            color: white;
         }
 
-        .info-text { font-size: 0.95em; color: #ecf0f1; margin-bottom: 15px; }
+        .info-text { font-size: 0.95em; color: #E0E0E0; margin-bottom: 15px; }
 
         .skill-tag {
             display: inline-block;
-            background: rgba(255,255,255,0.08);
+            background: rgba(178, 34, 34, 0.2); /* 淡淡的英国红背景 */
             padding: 5px 12px;
-            border-radius: 4px;
+            border-radius: 2px;
             margin: 4px;
             font-size: 0.85em;
-            border: 1px solid rgba(255,255,255,0.15);
+            border: 1px solid var(--british-red);
+            color: #FFD700; /* 金色字体 */
         }
 
-        /* RIGHT COLUMN */
+        /* 右侧主内容 */
         .main-content { padding: 50px 60px; }
         
         section { margin-bottom: 45px; }
+        
+        /* 标题采用清华紫 */
         h2 { 
-            color: var(--um-blue); 
-            border-left: 4px solid var(--accent-gold); 
-            padding-left: 20px; 
-            font-weight: 500;
-            font-size: 1.6em;
+            color: var(--tsinghua-purple); 
+            border-bottom: 2px solid var(--tsinghua-purple); 
+            display: inline-block;
+            padding-right: 30px;
+            font-weight: 600;
+            font-size: 1.8em;
             margin-bottom: 25px;
         }
 
         .card {
-            background: var(--light-gray);
+            background: white;
             padding: 25px;
-            border-radius: 12px;
+            border-radius: 4px;
             margin-bottom: 20px;
-            border: 1px solid #e1e4e8;
-            transition: transform 0.2s;
+            border: 1px solid #EAEAEA;
+            border-left: 5px solid var(--oxford-blue); /* 侧边海军蓝 */
+            transition: all 0.3s ease;
         }
         
-        .card:hover { transform: translateY(-3px); }
+        .card:hover { 
+            transform: scale(1.01);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
 
-        .card h4 { margin: 0 0 12px 0; color: var(--um-blue); font-size: 1.2em; }
+        .card h4 { margin: 0 0 12px 0; color: var(--oxford-blue); font-size: 1.2em; }
         
         .course-grid {
             display: grid;
@@ -97,30 +109,31 @@
             font-size: 0.95em;
         }
 
-        /* QUOTES DESIGN */
+        /* 引用块设计：暗调复古 */
         .quote-block {
-            background: var(--dark-bg);
-            color: #f1f1f1;
+            background: #1A1A1A;
+            color: #F1F1F1;
             padding: 40px;
-            border-radius: 12px;
+            border-radius: 4px;
             margin-top: 30px;
             position: relative;
-            border-bottom: 5px solid var(--accent-gold);
+            border-right: 8px solid var(--tsinghua-purple); /* 右侧清华紫装饰 */
         }
         .quote-text { font-style: italic; font-size: 1.1em; line-height: 1.8; display: block; }
-        .quote-cite { display: block; text-align: right; margin-top: 15px; color: var(--accent-gold); font-size: 0.9em; }
+        .quote-cite { display: block; text-align: right; margin-top: 15px; color: var(--british-red); font-weight: bold; }
 
         .footer-note {
             text-align: center;
             font-size: 0.85em;
-            color: #95a5a6;
-            margin-top: 20px;
-            font-style: italic;
+            color: #7F8C8D;
+            margin-top: 30px;
+            border-top: 1px dashed #CCC;
+            padding-top: 15px;
         }
 
         @media (max-width: 900px) {
             .container { grid-template-columns: 1fr; }
-            .sidebar { text-align: center; }
+            .sidebar { text-align: center; border-right: none; border-bottom: 6px solid var(--british-red); }
             .course-grid { grid-template-columns: 1fr; }
         }
     </style>
@@ -129,10 +142,10 @@
 
 <div class="container">
     <aside class="sidebar">
-        <div style="text-align: center; margin-bottom: 20px;">
+        <div style="text-align: center; margin-bottom: 25px;">
             <img src="profile.jpg" alt="Yanfeng Lin" 
-                 style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; 
-                        border: 3px solid var(--accent-gold);">
+                 style="width: 160px; height: 160px; border-radius: 4px; object-fit: cover; 
+                        border: 4px solid white; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
         </div>
         <div class="profile-header">
             <h1>Yanfeng Lin</h1>
@@ -141,7 +154,7 @@
         </div>
 
         <div class="sidebar-section">
-            <h3>Education Info</h3>
+            <h3>Contact Info</h3>
             <p class="info-text">
                 Department of Civil Engineering<br>
                 University of Macau
@@ -149,41 +162,41 @@
         </div>
 
         <div class="sidebar-section">
-            <h3>Technical Skills</h3>
-            <div class="skill-tag">Python (CIVL1000)</div>
-            <div class="skill-tag">Arduino/ESP8266</div>
-            <div class="skill-tag">CS61A Foundation</div>
-            <div class="skill-tag">AutoCAD (Learning)</div>
-            <div class="skill-tag">C++ Essentials</div>
+            <h3>Expertise</h3>
+            <div class="skill-tag">Python</div>
+            <div class="skill-tag">Arduino</div>
+            <div class="skill-tag">CS61A</div>
+            <div class="skill-tag">AutoCAD</div>
+            <div class="skill-tag">Hardware IoT</div>
         </div>
 
         <div class="sidebar-section">
             <h3>Languages</h3>
             <p class="info-text">
                 • Mandarin (Native)<br>
-                • English (IELTS Prep 2026)<br>
+                • English (IELTS Prep)<br>
                 • Cantonese (Receptive)
             </p>
         </div>
 
-        <div class="sidebar-section" style="opacity: 0.7; font-size: 0.9em; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
+        <div class="sidebar-section" style="opacity: 0.8; font-size: 0.9em; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 20px;">
             <p>"The farther back you can look, the farther forward you are likely to see."</p>
-            <p style="text-align: right;">— W. Churchill</p>
+            <p style="text-align: right; color: var(--british-red); font-weight: bold;">— W. Churchill</p>
         </div>
     </aside>
 
     <main class="main-content">
         <section>
-            <h2>Research & Projects</h2>
-            <div class="card" style="border-left: 4px solid var(--accent-gold);">
-                <h4>A Plug-and-Play Smart Terminal for Demand Response in Power Systems</h4>
-                <p style="font-size: 0.9em; color: #666; margin-bottom: 10px;">
+            <h2>Current Research</h2>
+            <div class="card" style="border-left: 5px solid var(--tsinghua-purple);">
+                <h4>A Plug-and-Play Smart Terminal for Demand Response</h4>
+                <p style="font-size: 0.9em; color: #555; margin-bottom: 10px;">
                     <i>Presenter | Supervised by Prof. Hongxun HUI</i>
                 </p>
                 <ul style="padding-left: 20px; font-size: 0.95em;">
-                    <li>Conducted research at the <b>Smart Energy Group, State Key Laboratory of Internet of Things for Smart City (SKL-IOTSC)</b>.</li>
-                    <li>Developed and presented a smart terminal prototype for power system demand response.</li>
-                    <li>Participated in the North Zone II Undergraduate Project Competition 2025.</li>
+                    <li>Investigating smart terminals at the <b>State Key Laboratory of Internet of Things for Smart City (SKL-IOTSC)</b>.</li>
+                    <li>Research project within the <b>Smart Energy Group</b>.</li>
+                    <li>Finalist in the North Zone II Undergraduate Project Competition 2025.</li>
                 </ul>
             </div>
         </section>
@@ -191,7 +204,7 @@
         <section>
             <h2>Academic Coursework</h2>
             <div class="card">
-                <h4>University of Macau | Year 1</h4>
+                <h4>University of Macau</h4>
                 <div class="course-grid">
                     <div>• <b>ECEN1008:</b> Physics I</div>
                     <div>• <b>GEST1004:</b> Quantitative Reasoning</div>
@@ -204,22 +217,22 @@
         <section>
             <h2>Professional Experience</h2>
             <div class="card">
-                <h4>AIE - Global Intelligent Machinery & Electronics Expo</h4>
-                <p style="font-size: 0.95em;">Participated in field research at the Zhuhai-Macau Expo, focusing on the integration of intelligent machinery and electronic products in modern infrastructure.</p>
+                <h4>AIE - Global Intelligent Machinery Expo</h4>
+                <p style="font-size: 0.95em;">Field study focusing on the application of intelligent machinery and electronic products in modern power systems.</p>
             </div>
             
             <div class="card">
                 <h4>Technical Practice</h4>
                 <ul style="padding-left: 20px; font-size: 0.95em;">
-                    <li><b>IoT & Hardware:</b> Gained practical exposure to ESP8266 hardware development and Arduino IDE programming.</li>
-                    <li><b>Computing Foundation:</b> Studying core concepts based on UC Berkeley's CS61A (Structure and Interpretation of Computer Programs).</li>
+                    <li><b>IoT Development:</b> Hands-on experience with ESP8266 and Arduino.</li>
+                    <li><b>CS Foundation:</b> Following UC Berkeley's CS61A methodology.</li>
                 </ul>
             </div>
         </section>
 
         <section>
             <h2>Professional Memberships</h2>
-            <div class="card" style="background: white; border-left: 4px solid var(--um-blue);">
+            <div class="card" style="border-left: 5px solid var(--british-red);">
                 <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.95em;">
                     <li style="margin-bottom: 8px;">• IEEE Power & Energy Society (PES) Student Member</li>
                     <li style="margin-bottom: 8px;">• IET University of Macau Student Network Member</li>
@@ -236,7 +249,7 @@
                 <span class="quote-cite">— Frank Herbert, <i>Dune</i></span>
             </div>
             <div class="footer-note">
-                "Truth is truth to the end of reckoning." — Shakespeare
+                "Truth is truth to the end of reckoning." — Shakespeare (Measure for Measure, 5.1)
             </div>
         </section>
     </main>
