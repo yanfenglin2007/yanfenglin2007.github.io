@@ -1,135 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yanfeng Lin - Personal Profile</title>
-    <style>
-        :root {
-            --conservative-dark: #2C3E50; 
-            --oxblood-red: #800000;      
-            --antique-gold: #B8860B;     
-            --bg-paper: #FDFDFD;
-        }
-
-        body {
-            font-family: "Georgia", serif;
-            background-color: #E5E5E5;
-            margin: 0; padding: 0;
-        }
-
-        .container {
-            max-width: 850px;
-            margin: 60px auto;
-            background: var(--bg-paper);
-            padding: 50px 60px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-            border-top: 10px solid var(--oxblood-red);
-        }
-
-        header { text-align: center; margin-bottom: 40px; }
-
-        .profile-img {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            object-fit: cover; /* 保证比例不缩放压扁 */
-            border: 3px solid var(--oxblood-red);
-            padding: 4px;
-            background-color: #EEE;
-            margin-bottom: 20px;
-        }
-
-        h1 { color: var(--conservative-dark); font-size: 2.8em; margin: 10px 0; }
-        .subtitle { font-size: 1.2em; color: #666; font-style: italic; }
-        .university { font-weight: bold; color: var(--oxblood-red); font-size: 1.15em; }
-
-        .quote-aside {
-            border-top: 1px solid #EEE;
-            border-bottom: 1px solid #EEE;
-            padding: 25px;
-            margin: 30px 0;
-            text-align: center;
-            font-style: italic;
-        }
-
-        .quote-author {
-            display: block; margin-top: 10px; font-weight: bold; 
-            color: var(--oxblood-red); text-transform: uppercase; font-size: 0.8em;
-        }
-
-        section { margin-bottom: 40px; }
-        h2 { border-bottom: 2px solid var(--antique-gold); display: inline-block; padding-right: 40px; font-variant: small-caps; }
-
-        .item-box {
-            background: #F8F9FA;
-            padding: 20px;
-            border-left: 5px solid var(--conservative-dark);
-            margin-bottom: 15px;
-        }
-
-        .grid-info { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-
-        footer { text-align: center; font-size: 0.9em; color: #888; border-top: 1px solid #EEE; padding: 20px; }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <header>
-            < img src="profile.jpg" 
-                 alt="Yanfeng Lin" 
-                 class="profile-img" 
-                 onerror="this.src='https://ui-avatars.com/api/?name=Yanfeng+Lin&background=2C3E50&color=fff&size=160'">
-            <h1>Yanfeng Lin</h1>
-            <div class="subtitle">Undergraduate Student, Class of 2029</div>
-            <div class="university">University of Macau</div>
-        </header>
-
-        <div class="quote-aside">
-            "I must not fear. Fear is the mind-killer..."
-            <span class="quote-author">— Frank Herbert, Dune</span>
-        </div>
-
-        <section>
-            <h2>Research & Engineering</h2>
-            <div class="item-box">
-                <strong style="color:var(--oxblood-red)">LEAD PRESENTER</strong><br>
-                <strong>Smart Terminal for Demand Response</strong><br>
-                Represented <b>University of Macau</b> at International Competition 2025. 
-                Conducted at <b>SKL-IOTSC</b>.
-            </div>
-        </section>
-
-        <section>
-            <h2>Technical Compendium</h2>
-            <div class="grid-info">
-                <div class="item-box">
-                    <strong>Programming & IoT</strong>
-                    <ul style="font-size: 0.9em; margin-top: 10px;">
-                        <li>Python (CS61A Framework)</li>
-                        <li>Arduino & ESP8266 IoT</li>
-                        <li>AutoCAD & Design</li>
-                    </ul>
-                </div>
-                <div class="item-box">
-                    <strong>Languages</strong>
-                    <ul style="font-size: 0.9em; margin-top: 10px;">
-                        <li>Mandarin (Native)</li>
-                        <li>English (IELTS Prep)</li>
-                        <li>Cantonese (Receptive)</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <div class="quote-aside" style="background:#F4F4F4; border:none;">
-            "The farther back you can look, the farther forward you are likely to see."
-            <span class="quote-author">— Winston S. Churchill</span>
-        </div>
-
-        <footer>
-            &copy; 2025 Yanfeng Lin. University of Macau.
-        </footer>
+<section>
+    <h2>Research & Projects</h2>
+    <div class="card" style="border-left: 4px solid var(--accent-gold);">
+        <h4>A Plug-and-Play Smart Terminal for Demand Response</h4>
+        <p style="font-size: 0.9em; color: #666; margin-bottom: 10px;">
+            <i>Presenter | Supervised by Prof. Hongxun HUI</i>
+        </p>
+        <ul style="padding-left: 20px; font-size: 0.9em;">
+            <li>Developed a smart terminal prototype for power system demand response.</li>
+            <li>Conducted research under <b>Smart Energy Group</b> at the <b>State Key Laboratory of Internet of Things for Smart City (SKL-IOTSC)</b>.</li>
+            <li>Presented project findings at the North Zone II Undergraduate Project Competition 2025.</li>
+        </ul>
     </div>
-</body>
-</html>
+</section>
+
+<section>
+    <h2>Leadership & Activities</h2>
+    <div class="card">
+        <h4>High School Student Union</h4>
+        <p style="font-size: 0.9em;">
+            <b>Head of Clubs Department:</b> Organized and coordinated school-wide events, significantly enhancing student engagement and community activities.
+        </p>
+    </div>
+</section>
