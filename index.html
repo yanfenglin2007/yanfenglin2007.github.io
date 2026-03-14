@@ -11,10 +11,8 @@
             --navy: #10233d;
             --navy-soft: #2a3d57;
             --gold: #b79b63;
-            --gold-soft: rgba(183, 155, 99, 0.22);
             --ivory: #fbf8f1;
             --paper: rgba(255,255,255,0.90);
-            --paper-strong: rgba(255,255,255,0.96);
             --text: #223248;
             --muted: #6e7682;
             --line: rgba(16, 35, 61, 0.10);
@@ -85,6 +83,8 @@
             border-radius: 30px;
             overflow: hidden;
             box-shadow: var(--shadow);
+            position: relative;
+            isolation: isolate;
         }
 
         .hero-band {
@@ -93,6 +93,7 @@
                 linear-gradient(90deg, rgba(16,35,61,0.96), rgba(22,40,66,0.95)),
                 linear-gradient(115deg, rgba(183,155,99,0.16), transparent 60%);
             position: relative;
+            z-index: 1;
         }
 
         .hero-band::after {
@@ -109,11 +110,15 @@
             gap: 34px;
             padding: 0 40px 40px;
             margin-top: -56px;
+            position: relative;
+            z-index: 3;
         }
 
         .portrait-col {
             display: flex;
             justify-content: center;
+            position: relative;
+            z-index: 4;
         }
 
         .profile-img {
@@ -124,6 +129,8 @@
             border: 5px solid rgba(255,255,255,0.96);
             box-shadow: 0 12px 28px rgba(16,35,61,0.18);
             background: #fff;
+            position: relative;
+            z-index: 5;
         }
 
         .intro {
@@ -357,6 +364,13 @@
             margin-bottom: 5px;
         }
 
+        .anchor-target {
+            position: relative;
+            top: -10px;
+            visibility: hidden;
+            height: 0;
+        }
+
         .quote-card {
             margin-top: 24px;
             padding: 26px 30px;
@@ -412,7 +426,7 @@
             }
 
             .hero-band { min-height: 118px; }
-            .hero-inner { margin-top: -42px; }
+            .hero-inner { margin-top: -34px; }
             .profile-img { width: 148px; height: 148px; }
             .engagement-grid { grid-template-columns: 1fr; }
         }
@@ -560,6 +574,8 @@
                 </div>
             </section>
         </div>
+
+        <div id="contact" class="anchor-target" aria-hidden="true"></div>
 
         <section class="quote-card" aria-label="Quotation">
             <blockquote>
