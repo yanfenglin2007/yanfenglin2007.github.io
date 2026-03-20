@@ -3,20 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal profile of Yanfeng LIN, undergraduate student at the University of Macau with interests in intelligent energy systems, electromechanical systems, and applied computing.">
-    <meta name="theme-color" content="#0f2340">
-    <title>Yanfeng LIN | Personal Profile</title>
+    <meta name="description" content="Personal profile of Yanfeng LIN, undergraduate student at the University of Macau with interdisciplinary interests in intelligent energy systems, electromechanical systems, and applied computing.">
+    <meta name="theme-color" content="#0b1727">
+    <title>Yanfeng LIN | Personal Dossier</title>
     <style>
         :root {
-            --navy: #10233d;
-            --navy-soft: #2a3d57;
-            --gold: #b79b63;
-            --ivory: #fbf8f1;
-            --paper: rgba(255,255,255,0.90);
-            --text: #223248;
-            --muted: #6e7682;
-            --line: rgba(16, 35, 61, 0.10);
-            --shadow: 0 18px 44px rgba(16, 35, 61, 0.10);
+            --navy: #0b1727;
+            --navy-soft: #22354c;
+            --navy-deep: #08111d;
+            --gold: #b08d57;
+            --gold-soft: rgba(176, 141, 87, 0.18);
+            --ivory: #f7f2e8;
+            --paper: rgba(255,255,255,0.94);
+            --paper-soft: rgba(255,255,255,0.88);
+            --text: #1f2c3a;
+            --muted: #687383;
+            --line: rgba(11, 23, 39, 0.10);
+            --shadow: 0 18px 46px rgba(11, 23, 39, 0.10);
             --radius: 20px;
         }
 
@@ -27,33 +30,30 @@
             margin: 0;
             font-family: Georgia, "Times New Roman", serif;
             color: var(--text);
-            line-height: 1.72;
+            line-height: 1.74;
             background:
-                radial-gradient(circle at 10% 0%, rgba(183, 155, 99, 0.14), transparent 26%),
-                radial-gradient(circle at 100% 20%, rgba(16, 35, 61, 0.06), transparent 28%),
-                linear-gradient(180deg, #f6f1e7 0%, #faf8f2 36%, #fcfbf8 100%);
+                radial-gradient(circle at 12% 0%, rgba(176, 141, 87, 0.16), transparent 26%),
+                radial-gradient(circle at 100% 18%, rgba(11, 23, 39, 0.05), transparent 28%),
+                linear-gradient(180deg, #f5efe3 0%, #faf7f0 38%, #fdfbf7 100%);
         }
 
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
+        a { color: inherit; text-decoration: none; }
 
         .shell {
-            max-width: 1120px;
+            max-width: 1140px;
             margin: 0 auto;
-            padding: 28px 18px 60px;
+            padding: 28px 18px 64px;
         }
 
         .court-line {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            gap: 14px;
-            margin-bottom: 16px;
+            gap: 16px;
+            margin-bottom: 18px;
             color: var(--navy-soft);
             font-size: 0.90rem;
-            letter-spacing: 0.08em;
+            letter-spacing: 0.10em;
             text-transform: uppercase;
         }
 
@@ -65,21 +65,21 @@
         }
 
         .seal {
-            width: 36px;
-            height: 36px;
+            width: 38px;
+            height: 38px;
             border-radius: 50%;
             display: grid;
             place-items: center;
             color: var(--gold);
-            border: 1px solid rgba(183, 155, 99, 0.55);
-            background: linear-gradient(135deg, rgba(183, 155, 99, 0.18), rgba(16, 35, 61, 0.05));
-            box-shadow: inset 0 0 0 4px rgba(255,255,255,0.75);
+            border: 1px solid rgba(176, 141, 87, 0.56);
+            background: linear-gradient(135deg, rgba(176,141,87,0.22), rgba(11,23,39,0.06));
+            box-shadow: inset 0 0 0 4px rgba(255,255,255,0.78);
             font-size: 0.92rem;
         }
 
         .hero {
-            background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(255,255,255,0.84));
-            border: 1px solid rgba(183, 155, 99, 0.30);
+            background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(255,255,255,0.88));
+            border: 1px solid rgba(176, 141, 87, 0.28);
             border-radius: 30px;
             overflow: hidden;
             box-shadow: var(--shadow);
@@ -88,10 +88,10 @@
         }
 
         .hero-band {
-            min-height: 148px;
+            min-height: 156px;
             background:
-                linear-gradient(90deg, rgba(16,35,61,0.96), rgba(22,40,66,0.95)),
-                linear-gradient(115deg, rgba(183,155,99,0.16), transparent 60%);
+                linear-gradient(90deg, rgba(8,17,29,0.97), rgba(15,28,47,0.95)),
+                linear-gradient(120deg, rgba(176,141,87,0.12), transparent 58%);
             position: relative;
             z-index: 1;
         }
@@ -101,15 +101,15 @@
             position: absolute;
             left: 0; right: 0; bottom: 0;
             height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(215, 196, 156, 0.88), transparent);
+            background: linear-gradient(90deg, transparent, rgba(224, 209, 178, 0.86), transparent);
         }
 
         .hero-inner {
             display: grid;
-            grid-template-columns: 210px 1fr;
+            grid-template-columns: 220px 1fr;
             gap: 34px;
-            padding: 0 40px 40px;
-            margin-top: -56px;
+            padding: 0 42px 40px;
+            margin-top: -62px;
             position: relative;
             z-index: 3;
         }
@@ -121,30 +121,45 @@
             z-index: 4;
         }
 
+        .profile-frame {
+            position: relative;
+            display: inline-flex;
+            padding: 6px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(176,141,87,0.78), rgba(255,255,255,0.98));
+            box-shadow: 0 14px 28px rgba(11,23,39,0.16);
+        }
+
+        .profile-frame::after {
+            content: "";
+            position: absolute;
+            inset: 4px;
+            border-radius: 50%;
+            border: 1px solid rgba(176,141,87,0.55);
+            pointer-events: none;
+        }
+
         .profile-img {
-            width: 180px;
-            height: 180px;
+            width: 182px;
+            height: 182px;
             object-fit: cover;
             border-radius: 50%;
-            border: 5px solid rgba(255,255,255,0.96);
-            box-shadow: 0 12px 28px rgba(16,35,61,0.18);
+            border: 4px solid rgba(255,255,255,0.96);
             background: #fff;
             position: relative;
             z-index: 5;
         }
 
-        .intro {
-            padding-top: 28px;
-        }
+        .intro { padding-top: 30px; }
 
         .eyebrow {
             display: inline-flex;
             align-items: center;
             gap: 12px;
-            color: #d9cda8;
+            color: #d8caab;
             letter-spacing: 0.18em;
             text-transform: uppercase;
-            font-size: 0.82rem;
+            font-size: 0.81rem;
             margin-bottom: 8px;
         }
 
@@ -153,27 +168,27 @@
             content: "";
             width: 28px;
             height: 1px;
-            background: rgba(215, 196, 156, 0.76);
+            background: rgba(216, 202, 171, 0.72);
         }
 
         h1 {
             margin: 0;
             color: var(--navy);
-            font-size: clamp(2.5rem, 5vw, 3.8rem);
+            font-size: clamp(2.6rem, 5vw, 3.9rem);
             line-height: 1.06;
-            letter-spacing: 0.02em;
+            letter-spacing: 0.03em;
         }
 
         .subtitle {
             margin: 14px 0 18px;
             color: var(--navy-soft);
-            font-size: 1.12rem;
+            font-size: 1.08rem;
         }
 
         .summary {
             margin: 0;
-            max-width: 67ch;
-            color: #364456;
+            max-width: 68ch;
+            color: #334255;
             font-size: 1.02rem;
         }
 
@@ -189,22 +204,23 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            min-height: 44px;
-            padding: 0 18px;
+            min-height: 42px;
+            padding: 0 17px;
             border-radius: 999px;
-            font-size: 0.95rem;
-            transition: transform .2s ease, box-shadow .2s ease;
+            font-size: 0.92rem;
+            letter-spacing: 0.03em;
+            transition: transform .2s ease, background-color .2s ease;
         }
 
         .btn {
             color: #fff;
-            background: linear-gradient(180deg, #183153, #10233d);
-            box-shadow: 0 10px 20px rgba(16,35,61,0.18);
+            background: linear-gradient(180deg, #132947, #0b1727);
+            border: 1px solid rgba(176,141,87,0.20);
         }
 
         .btn-ghost {
             color: var(--navy);
-            border: 1px solid rgba(16,35,61,0.14);
+            border: 1px solid rgba(11,23,39,0.14);
             background: rgba(255,255,255,0.76);
         }
 
@@ -219,8 +235,8 @@
 
         .ribbon-item {
             border-radius: 16px;
-            border: 1px solid rgba(183, 155, 99, 0.20);
-            background: linear-gradient(180deg, rgba(251,248,241,0.92), rgba(255,255,255,0.90));
+            border: 1px solid rgba(176, 141, 87, 0.20);
+            background: linear-gradient(180deg, rgba(250,246,238,0.94), rgba(255,255,255,0.92));
             padding: 15px 16px;
         }
 
@@ -235,7 +251,7 @@
 
         .layout {
             display: grid;
-            grid-template-columns: 1.08fr 0.92fr;
+            grid-template-columns: 1.06fr 0.94fr;
             gap: 24px;
             margin-top: 24px;
         }
@@ -245,7 +261,7 @@
             border: 1px solid var(--line);
             border-radius: var(--radius);
             padding: 26px;
-            box-shadow: 0 8px 24px rgba(16,35,61,0.05);
+            box-shadow: 0 8px 24px rgba(11,23,39,0.05);
         }
 
         .section-title {
@@ -254,14 +270,14 @@
             align-items: center;
             gap: 12px;
             color: var(--navy);
-            letter-spacing: 0.08em;
+            letter-spacing: 0.10em;
             text-transform: uppercase;
-            font-size: 0.98rem;
+            font-size: 0.97rem;
         }
 
         .section-title::before {
             content: "";
-            width: 30px;
+            width: 32px;
             height: 1px;
             background: linear-gradient(90deg, var(--gold), transparent);
         }
@@ -270,16 +286,16 @@
             margin-top: 18px;
             padding: 18px 20px;
             border-radius: 16px;
-            background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(248,244,236,0.95));
-            border: 1px solid rgba(183, 155, 99, 0.18);
+            background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(248,243,234,0.95));
+            border: 1px solid rgba(176, 141, 87, 0.18);
         }
 
         .highlight {
             border-radius: 20px;
             padding: 22px 24px;
-            background: linear-gradient(135deg, rgba(16,35,61,0.97), rgba(28,49,77,0.95));
+            background: linear-gradient(135deg, rgba(11,23,39,0.98), rgba(23,40,65,0.96));
             color: #f7f4ed;
-            border: 1px solid rgba(183, 155, 99, 0.26);
+            border: 1px solid rgba(176, 141, 87, 0.26);
         }
 
         .highlight h3 {
@@ -296,8 +312,7 @@
             font-size: 0.95rem;
         }
 
-        .tag-row,
-        .soft-tags {
+        .tag-row, .soft-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
@@ -308,7 +323,8 @@
             align-items: center;
             padding: 5px 11px;
             border-radius: 999px;
-            font-size: 0.86rem;
+            font-size: 0.84rem;
+            letter-spacing: 0.02em;
         }
 
         .tag.dark {
@@ -319,8 +335,8 @@
 
         .tag.soft {
             color: var(--navy);
-            background: rgba(183, 155, 99, 0.10);
-            border: 1px solid rgba(183, 155, 99, 0.18);
+            background: rgba(176, 141, 87, 0.08);
+            border: 1px solid rgba(176, 141, 87, 0.18);
         }
 
         ul.clean {
@@ -341,7 +357,7 @@
             left: 0;
             top: 0.12em;
             color: var(--gold);
-            font-size: 0.76rem;
+            font-size: 0.74rem;
         }
 
         .engagement-grid {
@@ -354,8 +370,8 @@
         .mini-card {
             padding: 16px;
             border-radius: 16px;
-            background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(250,247,240,0.96));
-            border: 1px solid rgba(16,35,61,0.08);
+            background: linear-gradient(180deg, rgba(255,255,255,0.94), rgba(250,247,240,0.97));
+            border: 1px solid rgba(11,23,39,0.08);
         }
 
         .mini-card strong {
@@ -364,26 +380,19 @@
             margin-bottom: 5px;
         }
 
-        .anchor-target {
-            position: relative;
-            top: -10px;
-            visibility: hidden;
-            height: 0;
-        }
-
         .quote-card {
             margin-top: 24px;
             padding: 26px 30px;
             border-radius: 22px;
-            background: linear-gradient(180deg, rgba(255,255,255,0.94), rgba(249,246,239,0.98));
-            border: 1px solid rgba(183, 155, 99, 0.22);
-            box-shadow: 0 8px 22px rgba(16,35,61,0.05);
+            background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(248,244,236,0.98));
+            border: 1px solid rgba(176, 141, 87, 0.22);
+            box-shadow: 0 8px 22px rgba(11,23,39,0.05);
         }
 
         blockquote {
             margin: 0;
             color: #314155;
-            font-size: 1.06rem;
+            font-size: 1.05rem;
         }
 
         blockquote footer {
@@ -395,28 +404,22 @@
         .footer {
             text-align: center;
             color: var(--muted);
-            font-size: 0.94rem;
+            font-size: 0.93rem;
             margin-top: 28px;
         }
 
         @media (max-width: 920px) {
-            .hero-inner,
-            .layout {
+            .hero-inner, .layout {
                 grid-template-columns: 1fr;
             }
 
             .hero-inner {
-                padding: 0 24px 28px;
+                padding: 0 24px 30px;
                 gap: 20px;
             }
 
-            .portrait-col {
-                justify-content: flex-start;
-            }
-
-            .ribbon {
-                grid-template-columns: 1fr;
-            }
+            .portrait-col { justify-content: flex-start; }
+            .ribbon { grid-template-columns: 1fr; }
         }
 
         @media (max-width: 620px) {
@@ -425,9 +428,9 @@
                 align-items: flex-start;
             }
 
-            .hero-band { min-height: 118px; }
-            .hero-inner { margin-top: -34px; }
-            .profile-img { width: 148px; height: 148px; }
+            .hero-band { min-height: 122px; }
+            .hero-inner { margin-top: -38px; }
+            .profile-img { width: 150px; height: 150px; }
             .engagement-grid { grid-template-columns: 1fr; }
         }
     </style>
@@ -439,27 +442,29 @@
                 <span class="seal">YL</span>
                 <span>Personal Dossier</span>
             </div>
-            <div>University of Macau · 2026 Profile Edition</div>
+            <div>University of Macau · 2026 Royal Edition</div>
         </div>
 
         <main class="hero">
             <div class="hero-band"></div>
             <div class="hero-inner">
                 <div class="portrait-col">
-                    <img src="profile.jpg" alt="Portrait of Yanfeng LIN" class="profile-img">
+                    <div class="profile-frame">
+                        <img src="profile.jpg" alt="Portrait of Yanfeng LIN" class="profile-img">
+                    </div>
                 </div>
                 <div class="intro">
                     <div class="eyebrow">University of Macau</div>
                     <h1>Yanfeng LIN</h1>
-                    <p class="subtitle">Undergraduate Student · Civil Engineering · Interdisciplinary Interests in Intelligent Energy, Electromechanical Systems, and Applied Computing</p>
+                    <p class="subtitle">Undergraduate Student at the University of Macau · Interdisciplinary Interests in Intelligent Energy, Electromechanical Systems, and Applied Computing</p>
                     <p class="summary">
-                        I am an undergraduate student with a growing academic focus on engineering systems that connect energy,
-                        embedded hardware, automation, and computational methods. My recent work has centred on practical smart-energy applications,
-                        system integration, and technical exploration in mapping, navigation, and intelligent devices.
+                        Yanfeng Lin is an undergraduate student at the University of Macau whose academic interests are centred on intelligent energy systems,
+                        embedded hardware, automation, and applied computing. Recent work has included project-based exploration in smart-energy applications,
+                        system integration, and engineering-oriented research involving mapping, navigation, and intelligent devices.
                     </p>
                     <div class="hero-links">
                         <a class="btn" href="#highlights">Selected Highlights</a>
-                        <a class="btn-ghost" href="#notes">Research Notes</a>
+                        <a class="btn-ghost" href="#engagements">Civic &amp; Cultural Engagements</a>
                     </div>
                     <div class="ribbon">
                         <div class="ribbon-item">
@@ -516,7 +521,7 @@
                     <ul class="clean" style="margin-top: 12px;">
                         <li>Mandarin Chinese — Native</li>
                         <li>English — Academic and presentation use</li>
-                        <li>Cantonese — Working understanding</li>
+                        <li>Cantonese — Basic listening comprehension</li>
                     </ul>
                 </div>
             </section>
@@ -530,7 +535,7 @@
                 <p>
                     <strong>Project:</strong> A Plug-and-Play Smart Terminal for Demand Response in Power Systems.
                     Selected through an internal evaluation process to represent the University of Macau on the international stage.
-                    As the <strong>First Presenter</strong>, I led the presentation and defence of the project, introducing a smart-energy solution
+                    As the <strong>First Presenter</strong>, Yanfeng led the presentation and defence of the project, introducing a smart-energy solution
                     involving practical hardware integration and demand-response applications.
                 </p>
                 <div class="tag-row" style="margin-top: 14px;">
@@ -546,9 +551,10 @@
             <section class="card" aria-labelledby="development-title">
                 <h2 class="section-title" id="development-title">Research Notes</h2>
                 <ul class="clean">
-                    <li><strong>CS61A Self-Study:</strong> Completed independent study of Structure and Interpretation of Computer Programs, building a stronger foundation in Python and algorithmic thinking.</li>
+                    <li><strong>CS61A Self-Study:</strong> Completed independent study of <em>Structure and Interpretation of Computer Programs</em>, building a stronger foundation in Python and algorithmic thinking.</li>
                     <li><strong>Research Assistant Experience:</strong> Joined research activities at The Hong Kong University of Science and Technology for 11 days as a research assistant, learning about large language models, mapping, UAV-based energy-saving applications, and RViz-based robotic mapping and navigation.</li>
-                    <li><strong>Academic direction:</strong> These experiences strengthened my interest in systems that combine sensing, control, computation, and deployable engineering devices.</li>
+                    <li><strong>Academic direction:</strong> These experiences strengthened an interest in systems that combine sensing, control, computation, and deployable engineering devices.</li>
+                    <li><strong>Public-facing technical work:</strong> Participated in project exhibition and engineering system demonstration activities at the Global Artificial Intelligence Machines and Electronics Expo (AIE), with work related to intelligent energy management.</li>
                 </ul>
             </section>
 
@@ -575,7 +581,27 @@
             </section>
         </div>
 
-        <div id="contact" class="anchor-target" aria-hidden="true"></div>
+        <div class="layout" id="engagements">
+            <section class="card" aria-labelledby="civic-title">
+                <h2 class="section-title" id="civic-title">Civic &amp; Cultural Engagements</h2>
+                <ul class="clean">
+                    <li><strong>UM Volunteer Programme (UMVP):</strong> Participated in volunteer service activities, including the Macao Red Cross volunteer exchange.</li>
+                    <li><strong>University of Macau Choir:</strong> Performed the National Anthem and the University Anthem at the Ceremony for the Conferment of Honorary Degrees and Higher Degrees.</li>
+                    <li><strong>Henry Fok Pearl Jubilee College:</strong> Participated in Walk for a Million as part of a city-wide charitable activity in Macau.</li>
+                    <li><strong>Buddy Programme:</strong> Took part in an international residential college exchange programme with Universiti Kebangsaan Malaysia, promoting intercultural communication and peer engagement.</li>
+                </ul>
+            </section>
+
+            <section class="card" aria-labelledby="selected-interests-title">
+                <h2 class="section-title" id="selected-interests-title">Selected Interests</h2>
+                <ul class="clean">
+                    <li><strong>Music &amp; Choral Performance:</strong> Interest in collective artistic expression, discipline, and ceremonial performance.</li>
+                    <li><strong>Sports:</strong> Badminton and football as forms of teamwork, discipline, and resilience.</li>
+                    <li><strong>Photography:</strong> Interest in visual storytelling, with photographic work previously exhibited during secondary school.</li>
+                    <li><strong>History &amp; Cultural Heritage:</strong> Ongoing interest in the relationship between technological development, society, and public responsibility.</li>
+                </ul>
+            </section>
+        </div>
 
         <section class="quote-card" aria-label="Quotation">
             <blockquote>
